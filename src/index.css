@@ -1,13 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer components {
+  .center {
+    @apply flex justify-center items-center;
+  }
+  .between {
+    @apply flex justify-between items-center;
+  }
+  .card {
+    @apply w-full bg-white dark:bg-slate-700 md:w-[47.5%] 
+    /* min-h-screen  */
+    md:h-4/5 shadow-mine p-5 md:rounded-md;
+  }
+  .card-title {
+    @apply font-jakarta font-extrabold dark:text-white;
+  }
+  .badge {
+    @apply inline-block ml-2 bg-my-blue px-2 rounded-sm text-white;
+  }
+  .mark-read {
+    @apply cursor-pointer text-slate-500 dark:text-slate-300 hover:text-slate-800 hover:dark:text-white;
+  }
+  .notification {
+    @apply rounded-md flex flex-wrap justify-between items-center p-3 mb-3 dark:text-white;
+  }
+  .notification-image {
+    @apply rounded-full w-12 h-12;
+  }
+  .notification-body {
+    @apply ml-3 flex-1 text-sm md:text-paragraph text-dark-grayish-blue dark:text-slate-300 relative;
+  }
+  .notification-message {
+    @apply border border-solid border-slate-400 w-[90%] p-4 text-paragraph rounded-md ml-auto text-dark-grayish-blue dark:text-slate-300;
+  }
+  .notification-name {
+    @apply text-sm font-jakarta font-extrabold mr-1 text-very-dark-blue dark:text-white;
+    /* truncate */
+  }
+  .red-mark {
+    @apply rounded-full inline-block w-2 h-2 bg-my-red ml-1 mt-1;
+  }
+  .time {
+    @apply w-full text-grayish-blue flex;
+  }
 }
