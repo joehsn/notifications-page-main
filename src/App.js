@@ -99,12 +99,12 @@ function App() {
       <div className="text-zinc-900 dark:text-white">
         Coded by{" "}
         <a
-          href="https://linktr.ee/joe_hsn"
+          href="https://linktr.ee/joehsn"
           rel="noreferrer"
           target="_blank"
           className="text-blue-700 dark:text-blue-300 underline"
         >
-          joe_hsn
+          @joehsn
         </a>
       </div>
       <button
